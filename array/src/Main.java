@@ -1,12 +1,15 @@
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
-        int[] array = new int[6];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = i + 10;
+        int[] people = new int[5];
+        for (int i = 0; i < people.length; i++) {
+            people[i] = new Random().nextInt(100);
         }
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+        double summ = 0;
+        for (int i = 0; i < people.length; i++) {
+            summ += people[i];
         }
-
+        System.out.println("Средний возраст: " + summ / people.length);
     }
 }
